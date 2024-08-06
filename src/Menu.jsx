@@ -149,7 +149,7 @@ function Menu() {
           </div>
         </div>
         <div  className='hidden'>
-          <div style={{display:"flex"}}>
+          <ul className='hidden__bottom'>
           <div className='hidden__box'>
             <p className='hidden__subtext'>Фильтры</p>
             <ul className='hidden__list'>
@@ -164,16 +164,16 @@ function Menu() {
               <span className='hidden__icon'><img className='hidden__add' src={Add} alt="Add" /></span>
             </ul>
           </div>
-          </div>
-          <div className='hidden__bottom'>
-            <Newcard data={b}/>
-            <Newcard data={b}/>
-            <Newcard data={b}/>
-            <Newcard data={b}/>
-            <Newcard data={b}/>
-            <Newcard data={b}/>
-          </div>
-          <button className='hidden__btn'>Показать еще</button>
+          </ul>
+          <ul className='hidden__bottom'>
+            <li><Newcard data={b}/></li>
+            <li><Newcard data={b}/></li>
+            <li><Newcard data={b}/></li>
+            <li><Newcard data={b}/></li>
+            <li><Newcard data={b}/></li>
+            <li><Newcard data={b}/></li>
+          </ul>
+          <ul className='hidden__bottom'><button className='hidden__btn'>Показать еще</button></ul>
         </div>
         <div className='menu__right'>
           <h2 className='menu__right-title'>Ковры</h2>

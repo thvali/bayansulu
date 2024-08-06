@@ -12,7 +12,7 @@
   border: 1px solid red;
 }
 .menu__container{
-  
+ display: flex;
 }
 .menu__item{
   width: 330px;
@@ -277,6 +277,9 @@
   margin: 20px 5px;
   flex-wrap: wrap;
 }
+.hidden{
+  display: none;
+}
 .hidden__bottom{
   display: flex;
   flex-wrap: wrap;
@@ -383,18 +386,29 @@
   color: rgba(29, 29, 29,0.5);  
   margin-left: 5px;
 }
-@media(max-width:320px){
+@media(max-width:900px){
   .menu__left{
     display: none;
   }
-  .container{
-    padding: 0 15px;
-  }
-  .newcard__container{
-    padding: 10px 0;
-    margin: 5px;
+  .menu__container{
+    display: block;
   }
   .menu__right{
     display: none;
+  }
+  .hidden__bottom{
+    margin: 0 auto ;
+    justify-content: center;
+  }
+  .newcard__container{
+    padding: 10px 0 !important;
+    margin: 5px 5px 5px 5px !important;
+  }
+  .container{
+    margin: 0 auto;
+    padding: 0 ;
+  }
+  .hidden{
+    display: block;
   }
 }
