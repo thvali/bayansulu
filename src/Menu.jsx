@@ -5,6 +5,7 @@ import Sub from '../public/Sub.png';
 import kover from '../public/kover.png';
 import Card from './Card';
 import burger from '../public/burger.svg'
+import Newcard from './Newcard';
 
 function Menu() {
   const [selected, setSelected] = useState(null);
@@ -20,6 +21,15 @@ function Menu() {
     img: kover,
     text: "Новинка",
     title: "Aster Q893A LVIZON LVIZON",
+    size: "60x100",
+    country: "Казахстан",
+    price: "160.000",
+    nextprice: "13.333"
+  }
+  const b = {
+    img: kover,
+    text: "Новинка",
+    name: "Aster Q893A LVIZON",
     size: "60x100",
     country: "Казахстан",
     price: "160.000",
@@ -138,14 +148,32 @@ function Menu() {
             }
           </div>
         </div>
-        <div className='hidden'>
-          <div className='hidden__left'>
+        <div  className='hidden'>
+          <div style={{display:"flex"}}>
+          <div className='hidden__box'>
             <p className='hidden__subtext'>Фильтры</p>
             <ul className='hidden__list'>
               <p className='hidden__text'>Ковры</p>
-              <img src={burger} alt="" />
+              <img style={{cursor:"pointer"}} src={burger} alt="" />
             </ul>
           </div>
+          <div className='hidden__box'>
+            <p className='hidden__subtext'>Сортировка</p>
+            <ul className='hidden__list'>
+              <p className='hidden__text'>По рейтингу</p>
+              <span className='hidden__icon'><img className='hidden__add' src={Add} alt="Add" /></span>
+            </ul>
+          </div>
+          </div>
+          <div className='hidden__bottom'>
+            <Newcard data={b}/>
+            <Newcard data={b}/>
+            <Newcard data={b}/>
+            <Newcard data={b}/>
+            <Newcard data={b}/>
+            <Newcard data={b}/>
+          </div>
+          <button className='hidden__btn'>Показать еще</button>
         </div>
         <div className='menu__right'>
           <h2 className='menu__right-title'>Ковры</h2>

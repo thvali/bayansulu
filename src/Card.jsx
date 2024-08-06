@@ -26,22 +26,22 @@ export default function Card({data}) {
                     <StarFilled />
                 </li>
             </ul>
-            <ul style={{display:"flex", alignItems:"center"}}>
-                <li style={{marginLeft:"20px"}}>
+            <ul className='card__a' style={{display:"flex", alignItems:"center"}}>
+                <li className='card__b' style={{marginLeft:"20px"}}>
                     <p className='card__text'>Цена</p>
                     <span className='card__wrapper'>
                         <li><p className='card__price'>{data.price}</p></li>
                         <li><img style={{width:"9px",height:"12px"}} src={tenge} alt="tenge" /></li>
                     </span>
                 </li>
-                <li style={{marginLeft:"15px"}}>
+                <li className='card__b' style={{marginLeft:"15px"}}>
                     <p className='card__text'>В рассрочку</p>
                     <div className='card__wrapper'>
                         <span style={{background:"#618C78",display:"flex", padding:"0px 7px", alignItems:"center",marginLeft:"4px"}}>
                             <li><p className='card__color-text'>{data.nextprice}</p></li>
                             <li><img style={{width:"8px",height:"10px"}} src={tengewhite} alt="tenge" /></li>
                         </span>
-                        <p className='card__text' style={{marginTop:"0"}}>х 12 мес</p>
+                        <p className='card__btext' style={{marginTop:"0",}}>х 12 мес</p>
                     </div>
                 </li>
             </ul>
